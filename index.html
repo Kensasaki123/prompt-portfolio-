@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f1">
+  <meta name="description" content="A personal portfolio featuring software projects, skills, and contact details.">
+  <title>Abdul Quavi | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Home"><span class="brand-mark">P.</span><span id="brand-name">Portfolio</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme"><span aria-hidden="true">◐</span><span class="toggle-label">Dark mode</span></button>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> STUDENT DEVELOPER · KOTA</p>
+        <h1>Hi, I'm <span class="accent" id="hero-name">Abdul Quavi</span><br> I build thoughtful<br>digital experiences.</h1>
+        <p class="hero-lede" id="hero-intro">I'm a student developer from Kota who enjoys learning how software works by building practical projects and exploring new technologies.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#projects">Explore my work <span aria-hidden="true">↘</span></a><a class="text-link" id="github-link" href="#contact" target="_blank" rel="noreferrer">GitHub profile <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="hero-art" aria-label="Profile portrait"><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-sun"></div><div class="art-card"><span class="art-tag">BUILD / LEARN / REPEAT</span><img class="profile-photo" id="profile-photo" alt="Profile photo of Abdul Quavi"><span class="art-caption">Curiosity<br>in progress.</span></div><span class="art-index">01 — 05</span></div>
+      <div class="hero-foot"><span>BASED IN <b id="location">YOUR CITY</b></span><span>SCROLL TO DISCOVER <span aria-hidden="true">↓</span></span></div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-kicker"><span>01</span> ABOUT ME</div>
+      <div class="about-body"><h2>Learning through<br><span class="serif">making things.</span></h2><div><p id="about-copy">I'm Abdul, a student developer from Kota exploring programming and web technologies. I enjoy learning by building practical projects and improving my ideas through code.</p><p id="education-copy">12th Standard · Indira International School</p><a class="arrow-link" href="#contact">Let's connect <span>↗</span></a></div></div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <div class="section-kicker"><span>02</span> WHAT I WORK WITH</div>
+      <div class="skills-heading"><h2>Tools &amp; <span class="serif">skills</span></h2><p>Technologies I use to explore, build, and improve.</p></div>
+      <div class="skill-list" id="skill-list"></div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="section-kicker"><span>03</span> SELECTED WORK</div>
+      <div class="projects-heading"><div><h2>Projects with<br><span class="serif">purpose.</span></h2></div><p>A collection of experiments, improvements, and applications made along the way.</p></div>
+      <div class="project-tools"><label class="search-box"><span aria-hidden="true">⌕</span><input id="project-search" type="search" placeholder="Search by name or technology..." aria-label="Search projects"></label><div class="filters" id="filters" aria-label="Filter projects"></div></div>
+      <p class="results-count" id="results-count" aria-live="polite"></p><div class="project-grid" id="project-grid"></div>
+      <p class="link-note" id="link-note">Project links are configured in <code>profile.js</code>.</p>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="section-kicker"><span>04</span> SAY HELLO</div><div class="contact-layout"><h2>Have an idea<br>in <span class="serif">mind?</span></h2><div><p>I'm always glad to talk about projects, learning, and opportunities.</p><a class="contact-email" id="email-link" href="mailto:hello@example.com">hello@example.com <span>↗</span></a><div class="social-links"><a id="contact-github" href="#" target="_blank" rel="noreferrer">GitHub ↗</a><a id="linkedin-link" href="#" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></div></div>
+    </section>
+  </main>
+  <footer><a class="brand" href="#home"><span class="brand-mark">P.</span><span id="footer-name">Portfolio</span></a><span>DESIGNED WITH INTENTION · <span id="year"></span></span><a href="#home">BACK TO TOP ↑</a></footer>
+
+  <button class="chat-launcher" id="chat-launcher" type="button" aria-label="Open portfolio assistant"><span aria-hidden="true">✳</span><span>Ask my AI</span></button>
+  <section class="chat-panel" id="chat-panel" aria-label="Portfolio AI assistant" hidden>
+    <header class="chat-header"><div><span class="chat-indicator"></span><strong>Portfolio assistant</strong><small>Ask me about my work</small></div><button id="chat-close" type="button" aria-label="Close assistant">×</button></header>
+    <div class="chat-messages" id="chat-messages" aria-live="polite"><div class="message assistant-message">Hi! Ask me about the portfolio, skills, or projects.</div></div>
+    <div class="suggestions"><button type="button">What projects have you completed?</button><button type="button">What are your skills?</button></div>
+    <form id="chat-form" class="chat-form"><label class="sr-only" for="chat-input">Your question</label><input id="chat-input" maxlength="500" placeholder="Ask a question..." autocomplete="off" required><button type="submit" aria-label="Send message">↑</button></form>
+  </section>
+  <script src="profile.js"></script><script src="app.js"></script>
+</body>
+</html>
